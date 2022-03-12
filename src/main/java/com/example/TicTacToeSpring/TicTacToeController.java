@@ -14,7 +14,7 @@ public class TicTacToeController {
         this.repository = repository;
     }
 
-    @GetMapping("/startGame")
+    @GetMapping("/gameStatus")
     public GameLogic getGames() {
         return new GameLogic(repository.save(new TicTacToeEntity()));
     }
